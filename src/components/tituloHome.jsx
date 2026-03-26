@@ -5,8 +5,8 @@ const tituloHome = () => {
         <div className="absolute z-10 top-[20%] left-1/4 max-w-[400px] w-full flex flex-col items-start justify-start gap-6">
 
             <div className="h-[18px] md:h-[22px] w-full flex items-center gap-3">
-                <div className={`h-[1px] w-[35px]  bg-${corTitulo}`}></div>
-                <p className={`text-${corTitulo}  tracking-widest font-black text-[11px]`}>
+                <div className="h-[1px] w-[35px]  bg-[#F5C069]"></div>
+                <p className="text-[#F5C069]  tracking-widest font-black text-[11px]">
                     MAGIC EVENTOS
                 </p>
             </div>

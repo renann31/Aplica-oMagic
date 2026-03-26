@@ -1,13 +1,9 @@
-import { Montserrat, Noto_Serif } from "next/font/google";
 import Image from "next/image";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
-const notoSerif = Noto_Serif({ subsets: ["latin"] });
 
 const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, invertido }) => {
   return (
     <div
-      className={`w-[78.8%] m-auto flex items-center justify-between ${
+      className={` flex min-h-0 h-[33.3%] items-center justify-between  ${
         invertido ? "flex-row-reverse" : ""
       }`}
     >
@@ -21,14 +17,14 @@ const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, inverti
         
         {/* categoria */}
         <div className="h-[18px] md:h-[22px] w-full flex items-center gap-3 z-10">
-          <div className="h-[1px] w-[36px] bg-primary"></div>
-          <p className="text-primary tracking-widest font-black text-[11px]">
+          <div className="h-[1px] w-[36px] bg-[#F5C069]"></div>
+          <p className="text-[#F5C069] tracking-widest font-black text-[9px]">
             {categoria}
           </p>
         </div>
 
         {/* título */}
-        <h2 className="text-white text-[39px] font-semibold leading-[1.05] tracking-tight text-left font-serif">
+        <h2 className="text-white text-[34px] font-semibold leading-[1.05] tracking-tight text-left font-serif">
           {titulo}
         </h2>
 
@@ -38,20 +34,21 @@ const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, inverti
         </p>
 
         {/* cta */}
-        <div className="h-[5%] w-full flex items-center gap-3 text-[11px]">
-          <p className="text-primary tracking-widest font-black">
+        <div className="h-[5%] w-full flex items-center gap-3 text-[9px]">
+          <p className="text-[#F5C069] tracking-widest font-black">
             Saiba mais
           </p>
         </div>
       </div>
 
       {/* imagem */}
-      <div className="max-w-[38.7%] rounded-lg object-cover overflow-hidden absolute">
+      <div className="w-[38.7%] rounded-lg overflow-hidden max-h-[100%]">
         <Image
           src={imagem}
-          alt={titulo}
-          fill
-          className="object-cover"
+          alt="Imagem do serviço"
+          width={600}
+          height={400}
+          className="w-full h-full object-contain rounded-lg"
         />
       </div>
     </div>

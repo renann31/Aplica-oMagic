@@ -1,9 +1,9 @@
 import Image from "next/image"; 
-const corFundo = "hsl(var(--color-background))"
+// const corFundo = "hsl(var(--color-background))"
 
 const BackgroundHome = () => {
     return (
-        <div className={`bg-${corFundo}`}>
+        <div className="bg-[#320A27]">
             <div className="w-full min-h-screen relative items-end flex overflow-hidden">
                <div className="w-full h-full object-cover opacity-60 absolute">
                 <Image
@@ -21,7 +21,7 @@ const BackgroundHome = () => {
                     className="object-contain"
                 />
                 </div>
-                <div className="w-full h-64 relative z-10 bg-gradient-to-b from-transparent to-[hsl(var(--color-background))]" />
+                <div className="w-full h-64 relative z-10 bg-gradient-to-b from-transparent to-[#320A27]" />
             </div>
         </div>
     )
