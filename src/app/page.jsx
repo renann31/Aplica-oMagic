@@ -2,14 +2,12 @@ import FaleConosco from "@/components/faleConosco.jsx";
 import BackgroundHome from "../components/backgroundHome.jsx";
 import CardServicoHome from "../components/cardServicosHome.jsx";
 import servicosData from "../components/servicosData.jsx";
-import TituloHome from "../components/tituloHome.jsx";
 
 const Home = () => {
     return (
         <div className="bg-[#320A27] h-844.25 w-full relative">
             <BackgroundHome />
-            <TituloHome />
-            <div className="relative w-[78.8%] top-30 left-[9%] h-[1320px]">
+            <div className="relative w-[72.4%] top-30 left-[9%] h-[39.2%]">
             {servicosData.map((item, index) => (
                     <CardServicoHome
                         key={item.id}

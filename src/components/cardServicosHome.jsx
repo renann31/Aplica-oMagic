@@ -3,7 +3,7 @@ import Image from "next/image";
 const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, invertido }) => {
   return (
     <div
-      className={` flex min-h-0 h-[33.3%] items-center justify-between  ${
+      className={` flex min-h-0 h-[30%] items-center justify-between mb-[7%] ${
         invertido ? "flex-row-reverse" : ""
       }`}
     >
@@ -11,14 +11,14 @@ const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, inverti
       <div className="w-[42.8%] flex flex-col gap-[13px] relative">
         
         {/* Número */}
-        <h1 className="text-[120px] text-white opacity-10 font-extrabold font-montserrat absolute left-[-70px] top-[15px]">
+        <h1 className="text-[120px] text-white opacity-10 font-extrabold font-montserrat absolute left-[-20%] top-[-50%]">
           {numero}
         </h1>
         
         {/* categoria */}
         <div className="h-[18px] md:h-[22px] w-full flex items-center gap-3 z-10">
           <div className="h-[1px] w-[36px] bg-[#F5C069]"></div>
-          <p className="text-[#F5C069] tracking-widest font-black text-[9px]">
+          <p className="text-[#F5C069] tracking-widest font-black text-[60%]">
             {categoria}
           </p>
         </div>
@@ -34,10 +34,11 @@ const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, inverti
         </p>
 
         {/* cta */}
-        <div className="h-[5%] w-full flex items-center gap-3 text-[9px]">
+        <div className="h-[5%] w-full flex items-center text-[9px]">
           <p className="text-[#F5C069] tracking-widest font-black">
-            Saiba mais
+            Saiba mais 
           </p>
+
         </div>
       </div>
 
