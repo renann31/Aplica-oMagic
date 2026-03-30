@@ -1,17 +1,17 @@
 import Image from "next/image";
 
-const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, invertido }) => {
+const CardServicoHome = ({ id, numero, categoria, titulo, descricao, imagem, invertido }) => {
   return (
     <div
-      className={` flex min-h-0 h-[30%] items-center justify-between mb-[7%] ${
+      id={id}
+      className={`flex min-h-0 h-[27.2%] items-center justify-between mb-[7%] px-28 ${
         invertido ? "flex-row-reverse" : ""
-      }`}
-    >
+      }`}>
       {/* texto */}
       <div className="w-[42.8%] flex flex-col gap-[13px] relative">
         
         {/* Número */}
-        <h1 className="text-[120px] text-white opacity-10 font-extrabold font-montserrat absolute left-[-20%] top-[-50%]">
+        <h1 className="text-[120px] text-white opacity-10 font-extrabold font-sans absolute left-[-20%] top-[-35%]">
           {numero}
         </h1>
         
@@ -43,7 +43,7 @@ const CardServicoHome = ({ numero, categoria, titulo, descricao, imagem, inverti
       </div>
 
       {/* imagem */}
-      <div className="w-[38.7%] rounded-lg overflow-hidden max-h-[100%]">
+      <div className="w-[38.7%] rounded-lg overflow-hidden h-full">
         <Image
           src={imagem}
           alt="Imagem do serviço"

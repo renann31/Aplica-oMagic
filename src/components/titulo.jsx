@@ -1,22 +1,24 @@
 import Image from "next/image";
+import dados from "@/data/titulos.json";
 const arrowDown = "/assets/arrow_downward_24px.png";
 
-const tituloHome = () => {
+const titulo = ({ pagina }) => {
+
     return (
         <div className="absolute z-10 top-[25%] left-1/4 max-w-[400px] w-full flex flex-col items-start justify-start gap-6">
 
             <div className="h-[18px] md:h-[22px] w-full flex items-center gap-3">
-                <div className="h-[1px] w-[35px]  bg-[#F5C069]"></div>
-                <p className="text-[#F5C069]  tracking-widest font-black text-[11px]">
-                    MAGIC EVENTOS
+                <div className="h-[1px] w-[35px] bg-[#F5C069]"></div>
+                <p className="text-[#F5C069] tracking-[2px] text-[11px] font-sans font-extrabold">
+                    {/* {conteudo.categoria} */}
                 </p>
             </div>
 
-            <h1 className="text-white text-[39px] font-semibold leading-[1.05] tracking-tight text-left font-serif">
-                Crie Memórias Inesquecíveis com a Magic
+            <h1 className="font-serif text-white text-[48px] font-semibold leading-[1.05] tracking-tight">
+                {/* {conteudo.titulo} */}
             </h1>
             <div className="flex items-center gap-2">
-                <p className="text-[9px] text-white font-bold">
+                <p className="font-sans text-[9px] text-white font-bold">
                     Role para baixo
                 </p>
                 <div className="relative w-3 h-3">
@@ -33,4 +35,4 @@ const tituloHome = () => {
     )
 };
 
-export default tituloHome;
+export default titulo;

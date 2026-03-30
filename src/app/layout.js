@@ -1,15 +1,19 @@
 import "./globals.css";
-import { Montserrat, Noto_Serif } from 'next/font/google'
+import { Montserrat, Noto_Serif } from 'next/font/google';
+import FaleConosco from "@/components/faleConosco.jsx";
+import BackgroundHome from "@/components/background.jsx";   
+import Rodape from "@/components/rodape.jsx";
+import SliderLateral from "@/components/sliderLateral.jsx";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
-})
+});
 
 const notoSerif = Noto_Serif({
   subsets: ['latin'],
   variable: '--font-noto-serif',
-})
+});
 
 
 export const metadata = {
@@ -21,9 +25,29 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={`${montserrat.variable} ${notoSerif.variable} h-full antialiased`}
     >
-      <body className={`min-h-full flex flex-col ${montserrat.variable} ${notoSerif.variable}`}>{children}</body>
+      <body className="font-sans">
+        <div className="bg-[#320A27] min-h-screen flex flex-col">
+
+          <div className="flex-1">
+
+            <BackgroundHome />
+
+            {children}
+
+            <div className="mt-20">
+              <FaleConosco />
+            </div>
+
+            <div className=" mb-[150px]">
+              <Rodape />
+            </div>
+          </div>
+
+
+        </div>
+      </body>
     </html>
   );
 }

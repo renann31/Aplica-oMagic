@@ -1,12 +1,12 @@
 import Image from "next/image"; 
-import TituloHome from "./tituloHome.jsx";
+import Titulo from "./titulo.jsx";
 // const corFundo = "hsl(var(--color-background))"
 
-const BackgroundHome = () => {
+const Background = () => {
     return (
-        <div className="bg-[#320A27]">
+        <div className="bg-[#320A27]" id="inicio">
             <div className="w-full min-h-screen relative items-end flex overflow-hidden">
-                <TituloHome />
+                <Titulo />
                <div className="w-full h-full object-cover opacity-60 absolute">
                 <Image
                     src="/assets/BGhome01.png"
@@ -29,4 +29,4 @@ const BackgroundHome = () => {
     )
 };
 
-export default BackgroundHome;
+export default Background;

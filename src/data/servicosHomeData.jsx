@@ -2,7 +2,7 @@
 
 const servicosData = [
   {
-    id: "1",
+    id: "s1",
     numero: "01",
     categoria: "SOCIAL",
     titulo: "Faça sua festa conosco!",
@@ -11,7 +11,7 @@ const servicosData = [
     imagem: "/assets/home01.png",
   },
   {
-    id: "2",
+    id: "s2",
     numero: "02",
     categoria: "CORPORATIVO",
     titulo: "Precisando animar a festa da empresa?",
@@ -20,7 +20,7 @@ const servicosData = [
     imagem: "/assets/home02.png",
   },
   {
-    id: "3",
+    id: "s3",
     numero: "03",
     categoria: "SOCIAL",
     titulo: "Veja nossas soluções e escolha a perfeita para você!",
