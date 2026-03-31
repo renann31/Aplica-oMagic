@@ -17,7 +17,6 @@ const SideSlider = () => {
             const index = sections.findIndex((s) => s.id === entry.target.id);
 
             if (index !== -1) setActiveIndex(index);
-            console.log(activeIndex)
           }
         });
       },

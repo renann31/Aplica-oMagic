@@ -4,7 +4,7 @@ const CardServicoHome = ({ id, numero, categoria, titulo, descricao, imagem, inv
   return (
     <div
       id={id}
-      className={`flex min-h-0 h-[27.2%] items-center justify-between mb-[7%] px-28 ${
+      className={`flex min-h-0 items-center justify-between mb-[7%] px-28 ${
         invertido ? "flex-row-reverse" : ""
       }`}>
       {/* texto */}
@@ -18,7 +18,7 @@ const CardServicoHome = ({ id, numero, categoria, titulo, descricao, imagem, inv
         {/* categoria */}
         <div className="h-[18px] md:h-[22px] w-full flex items-center gap-3 z-10">
           <div className="h-[1px] w-[36px] bg-[#F5C069]"></div>
-          <p className="text-[#F5C069] tracking-widest font-black text-[60%]">
+          <p className="text-[#F5C069] tracking-[6px] font-extrabold text-[60%]">
             {categoria}
           </p>
         </div>
@@ -43,13 +43,13 @@ const CardServicoHome = ({ id, numero, categoria, titulo, descricao, imagem, inv
       </div>
 
       {/* imagem */}
-      <div className="w-[38.7%] rounded-lg overflow-hidden h-full">
+      <div className="w-[38.7%] rounded-lg overflow-hidden">
         <Image
           src={imagem}
           alt="Imagem do serviço"
           width={600}
           height={400}
-          className="w-full h-full object-contain rounded-lg"
+          className="w-full h-auto object-contain rounded-lg"
         />
       </div>
     </div>

@@ -1,14 +1,11 @@
 const FaleConosco = () => {
     return (
-        <div 
-          className="w-[869px] h-[576px] relative left-[172px] justify-end"
-          
-        >
+        <div id="contato" className="w-[869px] h-[576px] relative left-[172px] justify-end">
             <div className="w-[47.6%] h-[30.6%] flex flex-col items-start justify-start gap-6">
             <h1 className="text-white text-[64px] font-normal leading-[1.05] tracking-tight font-serif">
                 Fale Conosco
             </h1>
-            <p className="text-[12px] text-white font-light font-montserrat">
+            <p className="text-[12px] text-white font-light font-sans">
                 Quer transformar seu evento em uma experiência inesquecível? Mande uma mensagem para a gente!
             </p>
             </div>

@@ -1,5 +1,3 @@
-
-
 const servicosData = [
   {
     id: "s1",
@@ -22,7 +20,7 @@ const servicosData = [
   {
     id: "s3",
     numero: "03",
-    categoria: "SOCIAL",
+    categoria: "PRODUTOS",
     titulo: "Veja nossas soluções e escolha a perfeita para você!",
     descricao:
       "A Magic oferece uma grande variedade de atrações e experiências interativas para tornar qualquer evento mais divertido, criativo e memorável.",
