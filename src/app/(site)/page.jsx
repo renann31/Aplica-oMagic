@@ -4,6 +4,7 @@ import SliderLateral from "@/components/sliderLateral.jsx"
 import CardServicoHome from "@/components/cardServicos.jsx";
 import servicosData from "@/data/servicosHomeData.jsx";
 import Rodape from "@/components/rodape";
+import FaleConosco from "@/components/faleConosco";
 
 export default function Home() {
   const conteudo = dados["home"];
@@ -26,6 +27,7 @@ export default function Home() {
               />
             ))}
           </div>
+          <FaleConosco id="contato" />
 
         </div>
       </div>

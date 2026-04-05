@@ -26,17 +26,13 @@ export default async function RootLayout({ children }) {
       lang="en"
       className={`${montserrat.variable} ${notoSerif.variable} h-full antialiased overflow-x-hidden`}
     >
-      <body className="font-sans ">
+      <body className="font-sans">
         <div className="bg-[#320A27] min-h-screen flex flex-col overflow-x-hidden">
 
           <div className="flex-1">
           <Navbar />
 
             {children}
-
-            <div className="mt-20">
-              <FaleConosco id="contato"/>
-            </div>
 
             <div className="md:mb-[150px]">
               <Rodape />

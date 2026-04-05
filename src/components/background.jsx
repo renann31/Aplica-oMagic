@@ -4,7 +4,7 @@ import Titulo from "./titulo.jsx";
 const Background = ({ data }) => {
     return (
         <div className="bg-[#320A27]" id="inicio">
-            <div className="w-full min-h-[80vh] md:min-h-screen relative flex items-end overflow-hidden">
+            <div className="w-full min-h-screen relative flex items-end overflow-hidden">
 
                 <Titulo data={data} />
 
@@ -16,7 +16,7 @@ const Background = ({ data }) => {
                         className="object-cover opacity-60"
                     />
                     {/* Desktop */}
-                    <div className="hidden md:block w-full h-full absolute bottom-0 z-20">
+                    <div className="hidden md:block w-full h-full top-[25%] absolute bottom-0 z-20">
                         <Image
                             src={data.bg2}
                             alt="Imagem do fundo camada 2"

@@ -1,4 +1,5 @@
 import Background from "@/components/background.jsx"
+import FaleConosco from "@/components/faleConosco";
 import dados from "@/data/data.json"
 import Image from "next/image";
 
@@ -46,6 +47,7 @@ export default async function SobreNos() {
                         </div>
                     ))}
                 </div>
+                <FaleConosco id="contato" />
             </div>
         </>
     )

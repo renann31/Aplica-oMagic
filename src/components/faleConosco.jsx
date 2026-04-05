@@ -32,13 +32,13 @@ const FaleConosco = () => {
   return (
     <div
       id="contato"
-      className="w-full max-w-[869px] mx-auto px-8 sm:px-8 md:px-0h-auto md:h-[576px] relative flex flex-col"
+      className="w-full max-w-200 px-8  h-auto relative flex flex-col   lg:max-w-[869px] sm:px-8 sm:ml-20 lg:ml-35 md:px-0 md:h-[576px] md:mt-20"
     >
-      <div className="w-full md:w-[47.6%] flex flex-col mb-8">
-        <h1 className="text-white text-[36px] md:text-[64px] font-serif font-light">
+      <div className="w-full md:w-1/2 flex flex-col mb-8">
+        <h1 className="text-white text-[36px] md:text-[64px] font-serif font-normal">
           Fale Conosco
         </h1>
-        <p className="font-sans text-[10px] text-white font-light ">
+        <p className="font-sans text-[10px] md:text-[12px] text-white font-light ">
           Quer transformar seu evento em uma experiência inesquecível? Mande uma mensagem para a gente!
         </p>
       </div>
@@ -48,7 +48,7 @@ const FaleConosco = () => {
           placeholder="Nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
-          className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+          className="border border-white/50 md:border-white rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 md:h-10 text-white text-[12px]"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
@@ -57,14 +57,14 @@ const FaleConosco = () => {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+            className="border border-white/50 md:border-white rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 md:h-10 text-white text-[12px]"
           />
           <input
             type="tel"
             placeholder="Telefone"
             /* value={telefone}
             onChange={(e) => setTelefone(e.target.value)} */
-            className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+            className="border border-white/50 md:border-white rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 md:h-10 text-white text-[12px]"
           />
         </div>
 
@@ -72,7 +72,7 @@ const FaleConosco = () => {
           placeholder="Mensagem"
           value={mensagem}
           onChange={(e) => setMensagem(e.target.value)}
-          className="border border-white/50 rounded-md md:rounded-[19px] p-1 md:p-4 w-full h-[100px] md:h-[218px] text-white mt-2 text-[12px]"
+          className="border border-white/50 md:border-white rounded-md md:rounded-[19px] p-1 md:p-4 w-full h-[100px] md:h-[218px] text-white mt-2 text-[12px]"
         />
 
         <div className="flex justify-center md:justify-end">

@@ -3,7 +3,7 @@ const arrowDown = "/assets/arrow_downward_24px.png";
 
 const Titulo = ({ data }) => {
     return (
-        <div className=" absolute z-40 top-[35%] md:top-[25%] left-[60%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[60%] md:max-w-[400px] flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6">
+        <div className=" absolute z-40 top-[35%] md:top-[20%] left-[50%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[70%] md:max-w-[400px] flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6">
 
             <div className="h-[18px] md:h-[22px] w-full flex items-center justify-start md:justify-start gap-3">
                 <div className="h-[1px] w-[25px] md:w-[35px] bg-[#F5C069]"></div>

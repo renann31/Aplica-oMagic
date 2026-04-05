@@ -14,7 +14,7 @@ const CardServicoHome = ({
   return (
     <div
       id={id}
-      className={`flex flex-col-reverse md:flex-row items-center mb-20 md:mb-[7%] px-5 sm:px-8 md:px-28 md:gap-30
+      className={`flex flex-col-reverse md:flex-row items-center mb-20 md:mb-[7%] md:gap-30
         ${invertido ? "md:flex-row-reverse" : ""}
       `}
     >
