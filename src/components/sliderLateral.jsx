@@ -53,8 +53,7 @@ const SideSlider = () => {
       { behavior: "smooth", block: "center" });
   };
   return (
-    <div className="fixed right-8 top-1/3 -translate-y-1/2 flex items-center gap-6 z-100">
-      {/* TEXTOS */}
+    <div className="hidden md:flex fixed top-1/3 -translate-y-1/2 right-4 md:right-8 items-center gap-4 z-[999]">
       <div className="flex flex-col text-right">
         {sections.map((section, index) => (
           <button

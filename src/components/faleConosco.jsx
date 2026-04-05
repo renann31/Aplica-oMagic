@@ -1,47 +1,88 @@
+"use client";
+import { useState } from "react";
+
 const FaleConosco = () => {
-    return (
-        <div id="contato" className="w-[869px] h-[576px] relative left-[172px] justify-end">
-            <div className="w-[47.6%] h-[30.6%] flex flex-col items-start justify-start gap-6">
-            <h1 className="text-white text-[64px] font-normal leading-[1.05] tracking-tight font-serif">
-                Fale Conosco
-            </h1>
-            <p className="text-[12px] text-white font-light font-sans">
-                Quer transformar seu evento em uma experiência inesquecível? Mande uma mensagem para a gente!
-            </p>
-            </div>
-            <form className="flex flex-col">
-  <input 
-    type="text" 
-    placeholder="Nome" 
-    className="border border-gray-300 rounded-[19px] p-2 px-6 w-full text-white text-[15px]" 
-  />
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
-  <div className="grid grid-cols-2 gap-4"> 
-    <input 
-      type="email" 
-      placeholder="Email" 
-      className="border border-gray-300 rounded-[19px] p-2 px-6 w-full text-white mt-2" 
-    />
-    <input 
-      type="tel" 
-      placeholder="Telefone" 
-      className="border border-gray-300 rounded-[19px] p-2 px-6 w-full text-white mt-2" 
-    />
-  </div>
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-  <textarea 
-    placeholder="Mensagem" 
-    className="border border-gray-300 rounded-[19px] p-4 w-full h-[218px] text-white mt-2" 
-  />
+    const res = await fetch("/api/contato", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nome, email, mensagem }),
+    });
 
-  <div className="flex justify-end">
-    <button className="bg-white text-black font-bold rounded-[19px] px-6 py-3 mt-4 w-[22%] opacity-75">
-      ENVIAR
-    </button>
-  </div>
-</form>
+    const data = await res.json();
+
+    if (data.ok) {
+      alert("Mensagem enviada!");
+      setNome("");
+      setEmail("");
+      setMensagem("");
+    } else {
+      alert("Erro ao enviar");
+    }
+  }
+
+  return (
+    <div
+      id="contato"
+      className="w-full max-w-[869px] mx-auto px-8 sm:px-8 md:px-0h-auto md:h-[576px] relative flex flex-col"
+    >
+      <div className="w-full md:w-[47.6%] flex flex-col mb-8">
+        <h1 className="text-white text-[36px] md:text-[64px] font-serif font-light">
+          Fale Conosco
+        </h1>
+        <p className="font-sans text-[10px] text-white font-light ">
+          Quer transformar seu evento em uma experiência inesquecível? Mande uma mensagem para a gente!
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2 md:gap-4">
+        <input
+          type="text"
+          placeholder="Nome"
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+          />
+          <input
+            type="tel"
+            placeholder="Telefone"
+            /* value={telefone}
+            onChange={(e) => setTelefone(e.target.value)} */
+            className="border border-white/50 rounded-md md:rounded-[19px] pb-[2px] px-3 md:px-6 w-full h-3.5 text-white text-[12px]"
+          />
         </div>
-    )
+
+        <textarea
+          placeholder="Mensagem"
+          value={mensagem}
+          onChange={(e) => setMensagem(e.target.value)}
+          className="border border-white/50 rounded-md md:rounded-[19px] p-1 md:p-4 w-full h-[100px] md:h-[218px] text-white mt-2 text-[12px]"
+        />
+
+        <div className="flex justify-center md:justify-end">
+          <button className="bg-white text-black font-bold rounded-2xl md:rounded-[19px] px-12 py-1 mt-4 md:w-[22%] opacity-75 font-sans text-[12px]">
+            ENVIAR
+          </button>
+        </div>
+      </form>
+    </div>
+  )
 };
 
 export default FaleConosco;
