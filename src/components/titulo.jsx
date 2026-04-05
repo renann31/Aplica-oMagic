@@ -12,7 +12,7 @@ const Titulo = ({ data }) => {
                 </p>
             </div>
 
-            <h1 className="font-serif text-white text-[36px] md:text-[48px] font-semibold leading-[1.1] tracking-tight">
+            <h1 className="font-serif text-white text-[35px] md:text-[48px] font-semibold leading-[1.1] tracking-tight">
                 {data.titulo}
             </h1>
 

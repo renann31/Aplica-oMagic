@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Titulo from "./titulo.jsx";
 
+
 const Background = ({ data }) => {
+    const estilo = data.estilo
     return (
         <div className="bg-[#320A27]" id="inicio">
             <div className="w-full min-h-screen relative flex items-end overflow-hidden">
@@ -26,12 +28,12 @@ const Background = ({ data }) => {
                     </div>
 
                     {/* Mobile */}
-                    <div className="block md:hidden w-full h-full absolute bottom-0 z-20">
+                    <div className={`block md:hidden w-full  absolute bottom-0 z-20 ${estilo}`}>
                         <Image
                             src={data.bg2m}
                             alt="Imagem do fundo camada 2 mobile"
                             fill
-                            className="object-contain object-bottom"
+                            className="object-cover object-bottom"
                         />
                     </div>
                 </div>

@@ -18,7 +18,7 @@ export default async function PaginaLayout({ params }) {
     <>
       <Background data={conteudo} />
 
-      <div className=" w-[70%] md:w-auto relative mt-10 md:mt-15 px-5 sm:px-8 md:ml-45 flex flex-col">
+      <div className=" w-[70%] md:w-auto relative mt-10 md:mt-15 px-5 sm:px-8 ml-10 md:ml-45 flex flex-col">
 
         {/* IMAGEM */}
         <div className="hidden relative md:absolute md:right-0 z-10 md:translate-y-[-60px] mb-10 md:mb-0 justify-center md:block">
@@ -77,17 +77,17 @@ export default async function PaginaLayout({ params }) {
           </ul>
 
 
+        </div>
+
+        </div>
+          <CarrosselMobile data={conteudo}/>
+        {/* VIDEO */}
         <iframe
-          className="w-[80%] md:w-[80%] aspect-video rounded-sm mt-16 md:mt-25 z-40"
+          className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 mb-30 mt-16 md:mt-25 z-40"
           src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
           title="YouTube video">
         </iframe>
         <FaleConosco id="contato" />
-        </div>
-
-        </div>
-          <CarrosselMobile />
-        {/* VIDEO */}
     </>
   );
 }

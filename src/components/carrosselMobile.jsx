@@ -1,15 +1,11 @@
 "use client";
 import Image from "next/image";
 
-const imagens = [
-  "/assets/c1.png",
-  "/assets/c2.png",
-  "/assets/c3.png",
-  "/assets/c4.png",
-  "/assets/c5.png"
-];
 
-const CarrosselMobile = () => {
+const CarrosselMobile = ({ data }) => {
+  const imagens = data.imagens
+
+
   return (
     <div className="w-full mt-10 md:hidden translate-x-10">
       <div className="flex gap-3 overflow-x-auto px-5 scrollbar-hide">
@@ -23,7 +19,7 @@ const CarrosselMobile = () => {
               src={src}
               alt="imagem"
               fill
-              className="object-cover"
+              className="object-cover "
             />
           </div>
         ))}

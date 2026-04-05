@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Background data={conteudo} />
 
-      <div className="bg-[#320A27] min-h-screen flex flex-col">
+      <div className="bg-[#320A27] min-h-screen flex flex-col w-[80%] mx-auto">
           <SliderLateral />
 
         <div className="flex-1">
@@ -27,10 +27,10 @@ export default function Home() {
               />
             ))}
           </div>
-          <FaleConosco id="contato" />
 
         </div>
       </div>
+          <FaleConosco id="contato" />
     </>
   );
 }

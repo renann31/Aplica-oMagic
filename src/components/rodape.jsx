@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Rodape = () => {
     return (
         <div className="h-full p-10 flex items-center justify-between relative md:px-[12.7%] md:py-10 md:pr-[19%]"
-            
-            >
+
+        >
             {/* lado esquerdo */}
             <div className="flex-col">
                 <div className="relative w-[110px] h-[97px] md:w-[168px] md:h-[148px]">
@@ -32,21 +33,23 @@ const Rodape = () => {
 
                 {/* Coluna esquerda */}
                 <div className="flex flex-col">
-                    <h3 className="font-extrabold font-sans text-[#FBD784] text-[9px] md:text-[12px] mb-3">Sobre nós</h3>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3">Quem é a Magic?</p>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3">Nossa história</p>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white">CDB</p>
+                <Link href="/sobre" className="font-extrabold font-sans text-[#FBD784] text-[9px] md:text-[12px] mb-3 md:mb-6">Sobre nós</Link>
+
+                <Link href="/sobre" className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3 md:mb-6">Quem é a Magic?</Link>
+                <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3 md:mb-6">Nossa história</p>
+                <p className="font-sans font-bold text-[7px] md:text-[9px] text-white ">CDB</p>
                 </div>
 
                 {/* Coluna direita */}
                 <div className="flex flex-col">
-                    <h3 className="font-extrabold font-sans text-[#FBD784] text-[9px] md:text-[12px] mb-3">Serviços</h3>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3">Social</p>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3">Corporativo</p>
-                    <p className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3">Produtos</p>
+                <h3 className="font-extrabold font-sans text-[#FBD784] text-[9px] md:text-[12px] mb-3 md:mb-6">Serviços</h3>
+
+                <Link href="/social" className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3 md:mb-6">Social</Link>
+                <Link href="/corporativo" className="font-sans font-bold text-[7px] md:text-[9px] text-white mb-3 md:mb-6">Corporativo</Link>
+                <Link href="/produtos" className="font-sans font-bold text-[7px] md:text-[9px] text-white">Produtos</Link>
                 </div>
 
-            </div>
+            </div>  
         </div>
     )
 };
