@@ -14,6 +14,7 @@
         "bg2": "/assets/BGsocial02.png",
         "bg2m": "/assets/BGsocialm.png",
         "estilo": "h-1/2",
+        "estilo_bg2": "",
         "imagens": [
             "/assets/c1.png",
             "/assets/c2.png",
@@ -56,10 +57,9 @@
                 "Safety Car",
                 "Magic Goods",
                 "La Operação Lua de Mel"
-            ],
-            "prancheta": "/assets/prancheta1.png",
-            "estilo_prancheta": "w-[51.7%] h-[30.9%] rotate-[4deg]"
-        }
+            ]
+        },
+        "prancheta": "/assets/prancheta1.png"
     },
     "corporativo": {
         "categoria": "CORPORATIVO",
@@ -115,8 +115,7 @@
                 "Halloween"
             ]
         },
-        "prancheta": "/assets/prancheta2.png",
-        "estilo_prancheta": "w-[51.7%] h-[31.4%]"
+        "prancheta": "/assets/prancheta2.png"
     },
     "produtos": {
         "categoria": "PRODUTOS",
@@ -156,8 +155,7 @@
                 "Roleta"
             ]
         },
-        "prancheta": "/assets/prancheta3.png",
-        "estilo_prancheta": "w-[47%] h-[32.1%]"
+        "prancheta": "/assets/prancheta3.png"
     },
     "sobre": {
         "categoria": "SOBRE NÓS",

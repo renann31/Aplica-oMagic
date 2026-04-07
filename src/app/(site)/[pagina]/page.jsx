@@ -13,7 +13,7 @@ export default async function PaginaLayout({ params }) {
   }
 
   const imagem = conteudo.prancheta;
-
+  
   return (
     <>
       <Background data={conteudo} />
@@ -24,7 +24,7 @@ export default async function PaginaLayout({ params }) {
         <div className="hidden relative md:absolute md:right-0 z-10 md:translate-y-[-60px] mb-10 md:mb-0 justify-center md:block">
           <Image 
             src={imagem} 
-            alt="" 
+            alt="prancheta" 
             width={500} 
             height={700} 
             className="object-contain w-[80%] md:w-auto" />
@@ -83,7 +83,7 @@ export default async function PaginaLayout({ params }) {
           <CarrosselMobile data={conteudo}/>
         {/* VIDEO */}
         <iframe
-          className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 mb-30 mt-16 md:mt-25 z-40"
+          className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 md:ml-30 mb-30 mt-16 md:mt-25 z-40"
           src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
           title="YouTube video">
         </iframe>

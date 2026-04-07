@@ -13,16 +13,16 @@ export default async function SobreNos() {
         <>
             <Background data={conteudo} />
 
-            <div className="flex flex-col w-full px-5 sm:px-8 md:w-[80%] md:ml-50 gap-12 md:gap-20">
+            <div className="flex flex-col w-full px-5 sm:px-8 md:w-[90%] md:ml-30 gap-12 md:gap-20">
 
                 {/* TEXTOS */}
                 <div className="text-white space-y-20 md:space-y-50">
 
                     {textos.map((t) => (
-                        <div key={t.id} className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+                        <div key={t.id} className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] items-center gap-8 md:gap-12">
 
                             {/* TEXTO */}
-                            <div className="space-y-4 md:max-w-[500px] order-2 md:order-1">
+                            <div className="space-y-4 md:max-w-[800px] order-2 md:order-1">
                                 <h1 className="font-serif font-normal text-[24px] md:text-[34px]">
                                     {t.titulo}
                                 </h1>
@@ -47,7 +47,9 @@ export default async function SobreNos() {
                         </div>
                     ))}
                 </div>
-                <FaleConosco id="contato" />
+                <div className="md:-translate-x-40">
+                    <FaleConosco id="contato" />
+                </div>
             </div>
         </>
     )
