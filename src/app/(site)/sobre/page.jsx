@@ -48,7 +48,7 @@ export default async function SobreNos() {
                     ))}
                 </div>
                 <div className="md:-translate-x-40">
-                    <FaleConosco id="contato" />
+                    <FaleConosco id="contato" data={conteudo} />
                 </div>
             </div>
         </>

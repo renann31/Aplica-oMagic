@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className="flex flex-row items-center gap-6 md:gap-20 w-full justify-center translate-y-[-15px] md:pr-50">
                 <Link href="/sobre" className={estilo}>Sobre Nós</Link>
                 <Link href="/produtos" className={estilo}>Serviços</Link>
-                <Link href="#contato" className={estilo}>Contato</Link>
+                <a href="#contato" className={estilo}>Contato</a>
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ export default function Home() {
 
         </div>
       </div>
-          <FaleConosco id="contato" />
+          <FaleConosco id="contato" data={conteudo}/>
     </>
   );
 }

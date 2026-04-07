@@ -1,37 +1,44 @@
+"use client";
 import Image from "next/image";
-const arrowDown = "/assets/arrow_downward_24px.png";
+import { motion } from "framer-motion";
 
 const Titulo = ({ data }) => {
-    return (
-        <div className=" absolute z-40 top-[35%] md:top-[15%] left-[50%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[70%] md:max-w-[400px] flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6">
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="absolute z-40 top-[35%] md:top-[15%] left-[50%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[70%] md:max-w-[400px] flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6"
+    >
 
-            <div className="h-[18px] md:h-[22px] w-full flex items-center justify-start md:justify-start gap-3">
-                <div className="h-[1px] w-[25px] md:w-[35px] bg-[#F5C069]"></div>
-                <p className="text-[#F5C069] tracking-[2px] text-[7px] md:text-[11px] font-sans font-extrabold">
-                    {data.categoria}
-                </p>
-            </div>
+      <div className="h-[18px] md:h-[22px] w-full flex items-center justify-start gap-3">
+        <div className="h-[1px] w-[25px] md:w-[35px] bg-[#F5C069]"></div>
+        <p className="text-[#F5C069] tracking-[2px] text-[7px] md:text-[11px] font-sans font-extrabold">
+          {data.categoria}
+        </p>
+      </div>
 
-            <h1 className="font-serif text-white text-[35px] md:text-[48px] font-semibold leading-[1.1] tracking-tight">
-                {data.titulo}
-            </h1>
+      <h1 className="font-serif text-white text-[35px] md:text-[48px] font-semibold leading-[1.1] tracking-tight">
+        {data.titulo}
+      </h1>
 
-            <div className="hidden md:flex items-center gap-2 justify-center md:justify-start">
-                <p className="font-sans text-[9px] text-white font-bold">
-                    Role para baixo
-                </p>
-                <div className="relative w-3 h-3">
-                    <Image
-                        src={arrowDown}
-                        alt="Seta para baixo"
-                        fill
-                        className="object-contain"
-                    />
-                </div>
-            </div>
-
+      <div className="hidden md:flex items-center gap-2 justify-start">
+        <p className="font-sans text-[9px] text-white font-bold">
+          Role para baixo
+        </p>
+        <div className="relative w-3 h-3">
+          <Image
+            src="/assets/setaBaixo.png"
+            alt="Seta para baixo"
+            fill
+            className="object-contain"
+          />
         </div>
-    )
+      </div>
+
+    </motion.div>
+  );
 };
 
-export default Titulo
+export default Titulo;

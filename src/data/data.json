@@ -5,7 +5,8 @@
         "bg1": "/assets/BGhome01.png",
         "bg2": "/assets/BGhome02.png",
         "bg2m": "/assets/BGhomeM.png",
-        "estilo": "h-[40%]"
+        "estilo": "h-[40%]",
+        "estilo_fale_conosco": "w-1/2"
     },
     "social": {
         "categoria": "SOCIAL",
@@ -15,6 +16,7 @@
         "bg2m": "/assets/BGsocialm.png",
         "estilo": "h-1/2",
         "estilo_bg2": "",
+        "estilo_fale_conosco": "w-1/2",
         "imagens": [
             "/assets/c1.png",
             "/assets/c2.png",
@@ -68,6 +70,7 @@
         "bg2": "/assets/BGcorporativo02.png",
         "bg2m": "/assets/BGcorporativom.png",
         "estilo": "h-[40%]",
+        "estilo_fale_conosco": "w-1/2",
         "imagens": [
             "/assets/cC1.png",
             "/assets/cC2.png",
@@ -124,6 +127,7 @@
         "bg2": "/assets/BGprodutos02.png",
         "bg2m": "/assets/BGprodutosm.png",
         "estilo": "h-[40%]",
+        "estilo_fale_conosco": "w-1/2",
         "imagens": [
             "/assets/cP1.png",
             "/assets/cP2.png",
@@ -162,6 +166,7 @@
         "titulo": "Quer nos conhecer melhor?",
         "bg1": "/assets/BGsobre.png",
         "bg2": "",
+        "estilo_fale_conosco": "md:w-[60%]",
         "textos": [
             {
                 "id": "1",

@@ -1,8 +1,10 @@
+"use client";
 import Background from "@/components/background.jsx";
 import CarrosselMobile from "@/components/carrosselMobile"
 import FaleConosco from "@/components/faleConosco";
 import dados from "@/data/data.json";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default async function PaginaLayout({ params }) {
   const { pagina } = await params;
@@ -13,7 +15,7 @@ export default async function PaginaLayout({ params }) {
   }
 
   const imagem = conteudo.prancheta;
-  
+
   return (
     <>
       <Background data={conteudo} />
@@ -22,24 +24,27 @@ export default async function PaginaLayout({ params }) {
 
         {/* IMAGEM */}
         <div className="hidden relative md:absolute md:right-0 z-10 md:translate-y-[-60px] mb-10 md:mb-0 justify-center md:block">
-          <Image 
-            src={imagem} 
-            alt="prancheta" 
-            width={500} 
-            height={700} 
+          <Image
+            src={imagem}
+            alt="prancheta"
+            width={500}
+            height={700}
             className="object-contain w-[80%] md:w-auto" />
         </div>
 
         {/* TEXTO */}
         <div className="w-full md:max-w-[70%] space-y-4 z-30 relative">
           {conteudo.paragrafo.map((texto, index) => (
-            <p
+            <motion.p
               key={index}
-              className="opacity-0 translate-y-4 animate-fadeUp font-sans font-light text-white text-[10px] md:text-[16px]"
-              style={{ animationDelay: `${4 + index * 0.2}s`, animationFillMode: "forwards" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              className="font-sans font-light text-white text-[10px] md:text-[16px]"
             >
               {texto}
-            </p>
+            </motion.p>
           ))}
         </div>
 
@@ -79,15 +84,15 @@ export default async function PaginaLayout({ params }) {
 
         </div>
 
-        </div>
-          <CarrosselMobile data={conteudo}/>
-        {/* VIDEO */}
-        <iframe
-          className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 md:ml-30 mb-30 mt-16 md:mt-25 z-40"
-          src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
-          title="YouTube video">
-        </iframe>
-        <FaleConosco id="contato" />
+      </div>
+      <CarrosselMobile data={conteudo} />
+      {/* VIDEO */}
+      <iframe
+        className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 md:ml-30 mb-30 mt-16 md:mt-25 z-40"
+        src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
+        title="YouTube video">
+      </iframe>
+      <FaleConosco id="contato" data={conteudo} />
     </>
   );
 }
