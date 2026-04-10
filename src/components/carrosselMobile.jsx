@@ -7,7 +7,7 @@ const CarrosselMobile = ({ data }) => {
 
 
   return (
-    <div className="w-full mt-10 md:hidden translate-x-10">
+    <div className="w-full mt-10 md:hidden translate-x-[-20px]">
       <div className="flex gap-3 overflow-x-auto px-5 scrollbar-hide">
 
         {imagens.map((src, index) => (

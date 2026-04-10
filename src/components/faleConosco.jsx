@@ -2,9 +2,7 @@
 import Swal from "sweetalert2";
 import { useState } from "react";
 
-const FaleConosco = ({ data }) => {
-  const estilo = data.estilo_fale_conosco
-
+const FaleConosco = () => {
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -70,13 +68,12 @@ const FaleConosco = ({ data }) => {
 
 
   return (
-    <div id="contato" className="w-full max-w-200 px-8  h-auto relative flex flex-col   lg:max-w-[67%] sm:px-8 md:ml-15 lg:ml-30 xl:ml-50 md:px-0 md:h-[576px] md:mt-20"
-    >
-      <div className={`full ${estilo} flex flex-col md:mb-10`}>
+    <div id="contato" className="w-full mx-auto h-auto relative flex flex-col   md:h-[576px] md:mt-20">
+      <div className="full w-[260px] md:w-1/2 flex flex-col mb-4 md:mb-10">
         <h1 className="text-white text-[36px] md:text-[64px] font-serif font-normal">
           Fale Conosco
         </h1>
-        <p className="font-sans text-[10px] md:text-[12px] text-white font-light ">
+        <p className="font-sans text-[10px] md:text-[12px] text-white font-light">
           Quer transformar seu evento em uma experiência inesquecível? Mande uma mensagem para a gente!
         </p>
       </div>

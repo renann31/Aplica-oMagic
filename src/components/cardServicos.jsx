@@ -29,7 +29,7 @@ const CardServicoHome = ({
       whileInView={animation.whileInView}
       transition={animation.transition}
       viewport={animation.viewport}
-      className={`flex flex-col-reverse md:flex-row items-center mb-20 md:mb-[7%] md:gap-30
+      className={`flex flex-col-reverse md:flex-row items-center mb-20 md:mb-[7%] md:gap-30 md:ml-5
         ${invertido ? "md:flex-row-reverse xl:translate-x-[-80px]" : ""}
       `}
     >

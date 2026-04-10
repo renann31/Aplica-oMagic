@@ -16,7 +16,7 @@ export default async function SobreNos() {
             <div className="flex flex-col w-full px-5 sm:px-8 md:w-[90%] md:ml-30 gap-12 md:gap-20">
 
                 {/* TEXTOS */}
-                <div className="text-white space-y-20 md:space-y-50">
+                <div className="w-full max-w-[320px] md:max-w-[1200px] mx-auto text-white space-y-20 md:space-y-50">
 
                     {textos.map((t) => (
                         <div key={t.id} className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] items-center gap-8 md:gap-12">
@@ -48,7 +48,6 @@ export default async function SobreNos() {
                     ))}
                 </div>
                 <div className="md:-translate-x-40">
-                    <FaleConosco id="contato" data={conteudo} />
                 </div>
             </div>
         </>

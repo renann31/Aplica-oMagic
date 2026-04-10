@@ -3,13 +3,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Titulo = ({ data }) => {
+  const estilo = data.estilo_titulo || "md:max-w-[400px]";
+
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="absolute z-40 top-[35%] md:top-[15%] left-[50%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[70%] md:max-w-[400px] flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6"
+      className={`absolute z-40 top-[35%] md:top-[15%] left-[50%] md:left-1/4 -translate-x-1/2 md:translate-x-0 w-[70%] ${estilo} flex flex-col items-center md:items-start text-left md:text-left gap-4 md:gap-6`}
     >
 
       <div className="h-[18px] md:h-[22px] w-full flex items-center justify-start gap-3">

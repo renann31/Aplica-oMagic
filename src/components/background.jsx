@@ -1,11 +1,11 @@
 "use client";
-
 import Image from "next/image";
 import Titulo from "./titulo.jsx";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Background = ({ data }) => {
-    const estilo = data.estilo;
+    const estilo_bg2mh = data.estilo_bg2mh;
+    const estilo_bg2m = data.estilo_bg2m;
 
     const { scrollY } = useScroll();
 
@@ -17,16 +17,19 @@ const Background = ({ data }) => {
 
     return (
         <div className="bg-[#320A27]" id="inicio">
+            {/* <div className="items-center w-full">
+                
+            </div> */}
             <div className="w-full min-h-screen md:min-h-[130vh] relative flex items-end overflow-hidden">
 
                 <Titulo data={data} />
 
                 <div className="w-full h-full absolute inset-0">
 
-                    {/* BG1 (fundo) */}
-                    <motion.div 
+                    {/* BG1 desktop */}
+                    <motion.div
                         style={{ y: yBg1 }}
-                        className="absolute inset-0 will-change-transform"
+                        className="hidden sm:block absolute inset-0 will-change-transform"
                     >
                         <Image
                             src={data.bg1}
@@ -36,8 +39,21 @@ const Background = ({ data }) => {
                         />
                     </motion.div>
 
+                    {/* BG1 mobile */}
+                    <motion.div
+                        style={{ y: yBg1 }}
+                        className="block sm:hidden absolute inset-0 will-change-transform"
+                    >
+                        <Image
+                            src={data.bg1m}
+                            alt="Imagem do fundo"
+                            fill
+                            className="object-cover opacity-50"
+                        />
+                    </motion.div>
+
                     {/* BG2 Desktop */}
-                    <motion.div style={{ y: yBg2 }} className="hidden md:block top-[25%] absolute inset-0 z-20 will-change-transform">
+                    <motion.div style={{ y: yBg2 }} className="hidden sm:block  absolute inset-0 z-20 will-change-transform">
                         <Image
                             src={data.bg2}
                             alt="Imagem do fundo camada 2"
@@ -47,12 +63,12 @@ const Background = ({ data }) => {
                     </motion.div>
 
                     {/* BG2 Mobile */}
-                    <motion.div style={{ y: yBg2 }} className={`block md:hidden absolute bottom-0 w-full z-20 ${estilo} will-change-transform`}>
+                    <motion.div style={{ y: yBg2 }} className={`block sm:hidden absolute bottom-0 w-full z-20 ${estilo_bg2mh} will-change-transform`}>
                         <Image
                             src={data.bg2m}
                             alt="Imagem do fundo camada 2 mobile"
                             fill
-                            className="object-cover object-bottom"
+                            className={`${estilo_bg2m} object-bottom`}
                         />
                     </motion.div>
 

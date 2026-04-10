@@ -1,7 +1,6 @@
 "use client";
 import Background from "@/components/background.jsx";
 import CarrosselMobile from "@/components/carrosselMobile"
-import FaleConosco from "@/components/faleConosco";
 import dados from "@/data/data.json";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -19,18 +18,17 @@ export default async function PaginaLayout({ params }) {
   return (
     <>
       <Background data={conteudo} />
+      {/* IMAGEM */}
+      <div className="hidden absolute md:absolute z-10 md:translate-y-[-60px] right-0 top-320 mb-10 md:mb-0 justify-center md:block">
+        <Image
+          src={imagem}
+          alt="prancheta"
+          width={500}
+          height={700}
+          className="object-contain w-[80%] md:w-auto" />
+      </div>
+      <div className="w-full max-w-[300px] md:max-w-[1200px] mx-auto relative mt-10 md:mt-15  sm:px-0  flex flex-col">
 
-      <div className=" w-[70%] md:w-auto relative mt-10 md:mt-15 px-5 sm:px-8 ml-10 md:ml-45 flex flex-col">
-
-        {/* IMAGEM */}
-        <div className="hidden relative md:absolute md:right-0 z-10 md:translate-y-[-60px] mb-10 md:mb-0 justify-center md:block">
-          <Image
-            src={imagem}
-            alt="prancheta"
-            width={500}
-            height={700}
-            className="object-contain w-[80%] md:w-auto" />
-        </div>
 
         {/* TEXTO */}
         <div className="w-full md:max-w-[70%] space-y-4 z-30 relative">
@@ -83,16 +81,14 @@ export default async function PaginaLayout({ params }) {
 
 
         </div>
-
+        <CarrosselMobile data={conteudo} />
+        {/* VIDEO */}
+        <iframe
+          className="w-full aspect-video rounded-sm mb-30 mt-16 md:mt-25 z-40"
+          src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
+          title="YouTube video">
+        </iframe>
       </div>
-      <CarrosselMobile data={conteudo} />
-      {/* VIDEO */}
-      <iframe
-        className="w-[80%] md:w-[80%] aspect-video rounded-sm ml-10 md:ml-30 mb-30 mt-16 md:mt-25 z-40"
-        src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
-        title="YouTube video">
-      </iframe>
-      <FaleConosco id="contato" data={conteudo} />
     </>
   );
 }

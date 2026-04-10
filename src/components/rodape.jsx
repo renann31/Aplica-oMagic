@@ -4,7 +4,7 @@ import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const Rodape = () => {
     return (
-        <div className="h-full p-10 flex items-center justify-between relative md:px-[12.7%] md:py-10 md:pr-[19%]"
+        <div className="h-full  flex items-center justify-between relative md:py-10"
 
         >
             {/* lado esquerdo */}
