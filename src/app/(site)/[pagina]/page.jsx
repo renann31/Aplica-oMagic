@@ -21,7 +21,12 @@ export default async function PaginaLayout({ params }) {
 
         {/* IMAGEM */}
         <div className="relative md:absolute md:right-0 z-10 md:translate-y-[-100px] mb-10 md:mb-0 flex justify-center md:block">
-          <Image src={imagem} alt="" width={700} height={1000} className="object-contain w-[80%] md:w-auto" />
+          <Image 
+            src={imagem} 
+            alt="" 
+            width={700} 
+            height={1000} 
+            className="object-contain w-[80%] md:w-auto" />
         </div>
 
         {/* TEXTO */}
