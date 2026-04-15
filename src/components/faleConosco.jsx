@@ -97,6 +97,7 @@ const FaleConosco = () => {
       <form onSubmit={handleSubmit} className="flex flex-col gap-2 md:gap-4">
         <input
           type="text"
+          required
           placeholder="Nome"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
@@ -118,6 +119,7 @@ const FaleConosco = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
           <input
             type="email"
+            required
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -137,6 +139,7 @@ const FaleConosco = () => {
           />
           <input
             type="tel"
+            required
             placeholder="Telefone"
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}
@@ -158,6 +161,7 @@ const FaleConosco = () => {
 
          <textarea
           placeholder="Mensagem"
+          required
           value={mensagem}
           onChange={(e) => setMensagem(e.target.value)}
           className="border border-white/50 md:border-white 

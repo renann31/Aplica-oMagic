@@ -15,7 +15,7 @@ export default async function PaginaLayout({ params }) {
 
   const imagem = conteudo.prancheta;
 
-   const animation = {
+  const animation = {
     initial: { opacity: 0, x: -80 },
     whileInView: { opacity: 1, x: 0 },
     transition: { duration: 1.6, ease: "easeOut" },
@@ -26,15 +26,15 @@ export default async function PaginaLayout({ params }) {
     <>
       <Background data={conteudo} />
       {/* IMAGEM */}
-      <div className="hidden absolute md:absolute z-10 md:translate-y-[-60px] right-0 top-320 mb-10 md:mb-0 justify-center md:block">
-        <Image
-          src={imagem}
-          alt="prancheta"
-          width={500}
-          height={700}
-          className="object-contain w-[80%] md:w-auto" />
-      </div>
       <div className="w-full max-w-[300px] md:max-w-[1000px] mx-auto relative mt-10 md:mt-15  sm:px-0  flex flex-col">
+        <div className="hidden relative md:absolute z-10 right-0 mb-10 md:mb-0 justify-center md:block">
+          <Image
+            src={imagem}
+            alt="prancheta"
+            width={400}
+            height={700}
+            className="object-contain md:w-auto" />
+        </div>
 
 
         {/* TEXTO */}
@@ -90,7 +90,7 @@ export default async function PaginaLayout({ params }) {
         </div>
         <CarrosselMobile data={conteudo} />
         {/* VIDEO */}
-        <motion.iframe
+        {/* <motion.iframe
           initial={animation.initial}
           whileInView={animation.whileInView}
           transition={animation.transition}
@@ -98,7 +98,7 @@ export default async function PaginaLayout({ params }) {
           className="w-full aspect-video rounded-sm mb-30 mt-16 md:mt-25 z-40"
           src="https://www.youtube.com/embed/iVWGUAQf12c?si=egKwgfTHK7v8IKQz"
           title="YouTube video">
-        </motion.iframe>
+        </motion.iframe> */}
       </div>
     </>
   );
