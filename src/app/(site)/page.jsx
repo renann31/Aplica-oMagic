@@ -9,14 +9,13 @@ export default function Home() {
 
   return (
     <>
-      <Background data={conteudo} />
-
-      <div className="bg-[#320A27] min-h-screen flex flex-col">
+     <Background data={conteudo} />
+      <div className="bg-[#320A27] min-h-screen flex flex-col md:max-w-[1000px] mx-auto">
           <SliderLateral />
 
         <div className="flex-1">
 
-          <div className="w-full px-5 sm:px-8 md:w-[72.4%] md:ml-[11%] mt-16 md:mt-30 flex flex-col gap-16 md:gap-24 mx-auto">
+          <div className="w-full px-5 md:px-0 mt-16 flex flex-col gap-16 mx-auto md:mt-30 md:gap-24 ">
             {servicosData.map((item, index) => (
               <CardServicoHome
                 key={item.id}

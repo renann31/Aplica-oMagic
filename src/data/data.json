@@ -2,14 +2,31 @@
     "home": {
         "categoria": "MAGIC EVENTOS",
         "titulo": "Crie Memórias Inesquecíveis Com A Magic",
-        "bg1": "/assets/BGhome01.png",
-        "bg2": "/assets/BGhome02.png"
+        "bg1": "/assets/BGhome01.webp",
+        "bg2": "/assets/BGhome02.png",
+        "bg1m": "/assets/BGhome01m.png",
+        "bg2m": "/assets/BGhome02m.png",
+        "estilo_bg2m": "object-cover",
+        "estilo_bg2mh": "h-[40%]",   
+        "estilo_fale_conosco": "w-1/2"
     },
     "social": {
         "categoria": "SOCIAL",
         "titulo": "Faça Sua Festa Conosco",
-        "bg1": "/assets/BGsocial01.png",
-        "bg2": "/assets/BGsocial02.png",
+        "bg1": "/assets/BGsocial01.webp",
+        "bg2": "/assets/BGsocial02.webp",
+        "bg1m": "/assets/BGsocial01m.png",
+        "bg2m": "/assets/BGsocial02m.png",
+        "estilo_bg2m": "object-contain",
+        "estilo_bg2mh": "h-full",
+        "estilo_fale_conosco": "w-1/2",
+        "imagens": [
+            "/assets/c1.png",
+            "/assets/c2.png",
+            "/assets/c3.png",
+            "/assets/c4.png",
+            "/assets/c5.png"
+        ],
         "paragrafo": [
             "Eventos sociais merecem ser únicos, e é exatamente isso que a Magic faz acontecer. Com uma equipe especializada em experiência do convidado, cada detalhe é pensado para criar momentos memoráveis, desde a recepção até os instantes mais animados da festa.",
             "Casamentos, aniversários, formaturas e celebrações especiais ganham vida com atrações interativas, personagens, experiências fotográficas e ações criativas que encantam os convidados. O resultado é uma festa cheia de energia, emoção e memórias inesquecíveis.",
@@ -47,14 +64,24 @@
                 "La Operação Lua de Mel"
             ]
         },
-        "prancheta": "/assets/prancheta1.png",
-        "estilo_prancheta": "w-[51.7%] h-[30.9%] rotate-[4deg]"
+        "prancheta": "/assets/prancheta1.png"
     },
     "corporativo": {
         "categoria": "CORPORATIVO",
         "titulo": "Precisando Animar A Festa Da Empresa?",
-        "bg1": "/assets/BGcorporativo01.png",
-        "bg2": "/assets/BGcorporativol02.png",
+        "bg1": "/assets/BGcorporativo01.webp",
+        "bg2": "/assets/BGcorporativo02.png",
+        "bg1m": "/assets/BGcorporativo01m.png",
+        "bg2m": "/assets/BGcorporativo02m.png",
+        "estilo_bg2m": "object-contain",
+        "estilo_bg2mh": "h-full",
+        "estilo_fale_conosco": "w-1/2",
+        "imagens": [
+            "/assets/cC1.png",
+            "/assets/cC2.png",
+            "/assets/cC3.png",
+            "/assets/cC4.png"
+        ],
         "paragrafo": [
             "   A Magic desenvolve experiências criativas para eventos corporativos, convenções, ativações de marca e confraternizações empresariais. Cada ação é pensada para gerar interação, engajamento e impacto positivo entre colaboradores, clientes e parceiros.",
             "   Com soluções que combinam entretenimento, tecnologia e ativações personalizadas, é possível transformar eventos institucionais em experiências envolventes que fortalecem a presença da marca e criam conexões reais com o público.",
@@ -96,14 +123,24 @@
                 "Halloween"
             ]
         },
-        "prancheta": "/assets/prancheta2.png",
-        "estilo_prancheta": "w-[51.7%] h-[31.4%]"
+        "prancheta": "/assets/prancheta2.png"
     },
     "produtos": {
         "categoria": "PRODUTOS",
-        "titulo": "Veja nossas soluções e escolha a perfeita para você!",
-        "bg1": "/assets/BGprodutos01.png",
+        "titulo": "Veja Nossas Soluções E Escolha A Perfeita Para Você!",
+        "bg1": "/assets/BGprodutos01.webp",
         "bg2": "/assets/BGprodutos02.png",
+        "bg1m": "/assets/BGprodutos01m.png",
+        "bg2m": "/assets/BGprodutos02m.png",
+        "estilo_bg2m": "object-contain",
+        "estilo_bg2mh": "h-full",
+        "estilo_fale_conosco": "w-1/2",
+        "estilo_titulo": "md:max-w-[500px]",
+        "imagens": [
+            "/assets/cP1.png",
+            "/assets/cP2.png",
+            "/assets/cP3.png"
+        ],
         "paragrafo": [
             "O portfólio da Magic reúne diversas soluções criadas para encantar convidados e gerar experiências únicas. Entre elas estão atrações fotográficas, experiências interativas e personagens que animam a pista e surpreendem os convidados.",
             "Cada produto pode ser adaptado ao estilo do evento, criando experiências personalizadas que transformam qualquer ocasião em um momento único.",
@@ -130,13 +167,52 @@
                 "Roleta"
             ]
         },
-        "prancheta": "/assets/prancheta3.png",
-        "estilo_prancheta": "w-[47%] h-[32.1%]"
+        "prancheta": "/assets/prancheta3.png"
     },
     "sobre": {
         "categoria": "SOBRE NÓS",
         "titulo": "Quer nos conhecer melhor?",
-        "bg1": "/assets/BGsobre.png",
-        "bg2": ""
+        "bg1": "/assets/BGsobre.webp",
+        "bg2": "",
+        "bg1m": "/assets/BGsobrem.png",
+        "bg2m": "",
+        "estilo": "h-[40%]",
+        "estilo_fale_conosco": "md:w-[60%]",
+        "textos": [
+            {
+                "id": "1",
+                "titulo": "Quem Somos?",
+                "texto": [
+                    "A Magic Eventos nasceu com o propósito de transformar eventos em experiências memoráveis. Especializada em entretenimento e guest experience, a emprescria atrações interativas, criativas e surpreendentes que elevam o nível de qualquer celebração.",
+                    "A missão da Magic é encantar pessoas e criar momentos únicos por meio de soluções inovadoras, equipes preparadas e experiências que geram emoçãodiversão e conexão entre os convidados."
+                ]
+            },
+            {
+                "id": "2",
+                "titulo": "Nossa História",
+                "texto": [
+                    "A Magic surgiu com a ideia de levar mais criatividade e interação para eventos sociais e corporativos. Desde o início, o objetivo sempre foi tirar afestas do   comum e proporcionar experiências que realmente surpreendessem os convidados.",
+                    "Ao longo dos anos, a empresa se consolidou como referência em entretenimento para eventos em Uberlândia e região, acumulando milhares de eventorealizados e impactando mais de um milhão de pessoas com atrações criativas, profissionais apaixonados pelo que fazem e uma constante busca por inovação."
+                ]
+            },
+            {
+                "id": "3",
+                "titulo": "Grupo Daniella Borraz (GDB)",
+                "texto": [
+                    "A Magic Eventos faz parte do Grupo Daniella Borraz (GDB), uma holding que reúne empresas especializadas em eventos, marketing, tecnologia experiências de marca",
+                    "Dentro dessa estrutura, a Magic representa a vertente de entretenimento do grupo, responsável por criar atrações, interações e experiências quencantam os convidados e tornam cada evento mais envolvente. Integrada às demais empresas do GDB, a Magic contribui para oferecer soluções completas experiências cada vez mais memoráveis."
+                ]
+            },
+            {
+                "id": "4",
+                "titulo": "UAI é Entretenimento",
+                "texto": [
+                    "Nossos valores sáo formados pela sigla UAI.",
+                    "U— Universo: mergulhamos na realidade do cliente para compreender objetivos, cultura e desafios.",
+                    "A— Aliado: construímos relações sólidas baseadas em confiança e parceria real.",
+                    "I— Impacto: entregamos experiências memoráveis que geram resultado mensurável"
+                ]
+            }
+        ]
     }
 }
