@@ -14,7 +14,7 @@
         "categoria": "SOCIAL",
         "titulo": "Faça Sua Festa Conosco",
         "bg1": "/assets/BGsocial01.webp",
-        "bg2": "/assets/BGsocial02.webp",
+        "bg2": "/assets/BGsocial02.png",
         "bg1m": "/assets/BGsocial01m.png",
         "bg2m": "/assets/BGsocial02m.png",
         "estilo_bg2m": "object-contain",

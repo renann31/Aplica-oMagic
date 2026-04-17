@@ -12,7 +12,7 @@ export default function Home() {
      <Background data={conteudo} />
       <div className="bg-[#320A27] min-h-screen flex flex-col md:max-w-[1000px] mx-auto">
           <SliderLateral />
-
+    
         <div className="flex-1">
 
           <div className="w-full px-5 md:px-0 mt-16 flex flex-col gap-16 mx-auto md:mt-30 md:gap-24 ">
